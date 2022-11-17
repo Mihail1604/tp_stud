@@ -8,33 +8,34 @@ using System.Text.Json.Serialization;
 
 namespace Serialization
 {
-    public class Arenda
+    public class Rent
     {
         public int Id { get; set; }
-        public string Marka { get; set; }
-        public string Model { get; set; }
         public int Price { get; set; }
+        public string Brand { get; set; }
+        public string Model { get; set; }
 
-        public Arenda() { }
-        public Arenda(int id, string marka, string model, int price)
+        public Rent() { }
+        public Rent(int id, string brand, string model, int price)
         {
             Id = id;
-            Marka = marka;
+            Brand = brand;
             Model = model;
             Price = price;
-            
+
         }
+    }
 
 
 
-        public class Klient
+        public class Client
         {
             public int Id { get; set; }
 
             public string FIO { get; set; }
             public int Age { get; set; }
-            public Klient() { }
-            public Klient(int klientid, string fio, int age)
+            public Client() { }
+            public Client(int id, string fio, int age)
             {
                 Id = id;
                 FIO = fio;
@@ -42,7 +43,7 @@ namespace Serialization
             }
 
         }
-    }
+    
 
     public class JsonHandler<T> where T : class
     {
@@ -122,13 +123,13 @@ namespace Serialization
     {
         static void Main(string[] args)
         {
-            List<Arenda> partsList = new List<Arenda>();
+            List<Rent> partsList = new List<Rent>();
 
-            JsonHandler<Arenda> partsHandler = new JsonHandler<Arenda>("PartsFile.json");
+            JsonHandler<Rent> partsHandler = new JsonHandler<Rent>("PartsFile.json");
 
-            partsList.Add(new Arenda(1, "Lada", "2115", "10000" ,new Klient(256, "Krivosheev Mihail", "19")));
-            partsList.Add(new Arenda(2, "BMW", "M5 F90", "35000" ,new Klient(222, "Khrisanov Arseny", "19")));
-            partsList.Add(new Arenda(3, "Mercedes", "c63 amg", "40000" , new Klient(128, "Zinkov Daniil", "22")));
+            partsList.Add(new Rent(1, "Lada", "Granta", "10000" ,new Client(256, "Krivosheev Mihail", "19")));
+            partsList.Add(new Rent(2, "BMW", "M5 F90", "35000" ,new Client(222, "Khrisanov Arseny", "19")));
+            partsList.Add(new Rent(3, "Mercedes", "c63 amg", "40000" , new Client(128, "Zinkov Daniil", "22")));
 
 
             partsHandler.Rewrite(partsList);
@@ -136,3 +137,7 @@ namespace Serialization
         }
     }
 }
+
+        
+    
+
