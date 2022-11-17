@@ -29,14 +29,14 @@ namespace Serialization
 
         public class Klient
         {
-            public int Klientid { get; set; }
+            public int Id { get; set; }
 
             public string FIO { get; set; }
             public int Age { get; set; }
             public Klient() { }
             public Klient(int klientid, string fio, int age)
             {
-                Klientid = klientid;
+                Id = id;
                 FIO = fio;
                 Age = age;
             }
