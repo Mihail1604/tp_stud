@@ -11,12 +11,12 @@ namespace Serialization
     public class Arenda
     {
         public int Id { get; set; }
-        public int Price { get; set; }
         public string Marka { get; set; }
         public string Model { get; set; }
+        public int Price { get; set; }
 
         public Arenda() { }
-        public Arenda(int id, string marka, string model,int price)
+        public Arenda(int id, string marka, string model, int price)
         {
             Id = id;
             Marka = marka;
