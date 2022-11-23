@@ -5,7 +5,6 @@ using System.Numerics;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-
 namespace Serialization
 {
     public class Rent
@@ -26,12 +25,9 @@ namespace Serialization
         }
     }
 
-
-
         public class Client
         {
             public int Id { get; set; }
-
             public string FIO { get; set; }
             public int Age { get; set; }
             public Client() { }
@@ -44,12 +40,10 @@ namespace Serialization
 
         }
     
-
     public class JsonHandler<T> where T : class
     {
         private string NameFile;
         JsonSerializerOptions options = new JsonSerializerOptions { WriteIndented = true };
-
 
         public JsonHandler() { }
 
@@ -57,7 +51,6 @@ namespace Serialization
         {
             this.NameFile = NameFile;
         }
-
 
         public void SetFileName(string NameFile)
         {
@@ -137,7 +130,3 @@ namespace Serialization
         }
     }
 }
-
-        
-    
-
