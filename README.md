@@ -27,6 +27,8 @@ BPMN (Business Process Model and Notation) - это язык моделиров�
 
 ![диаграмма](https://user-images.githubusercontent.com/113554318/198143675-e0f4d98d-1538-47ef-bb63-12de4c1c018b.png)
 
+<div align="center">Рисунок 1 - BPMN-диаграмма </div>
+
 ### **1.3 Описание бизнес-процесса**
   -------------------------------------------------
 
@@ -49,4 +51,6 @@ Use Case  — это сценарная техника описания взаи
 ![Снимок](https://user-images.githubusercontent.com/113554318/198144474-31b3357b-920c-4d57-bc71-1dcc78e06b1a.PNG)
 
 ![Снимок2](https://user-images.githubusercontent.com/113554318/198144854-c76a64bb-0354-4e9f-9bcb-4f7d272b20d0.PNG)
+
+<div align="center">Рисунок 2 - Use Case модель </div>
 
