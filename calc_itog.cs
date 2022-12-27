@@ -92,7 +92,6 @@ namespace calc
                 }
                 else return "Ошибка! " + (i + 1) + "-ый символ не является символом операции или цифрой";
             }
-            
             while (operStack.Count > 0)
                 output += operStack.Pop() + " ";
             return output; 
@@ -101,13 +100,11 @@ namespace calc
         {
             double result = double.NaN; 
             Stack<double> temp = new Stack<double>();  
- 
             for (int i = 0; i < input.Length; i++) 
             {
                 if (char.IsDigit(input[i])||input[i]==',')
                 {
                     string a = string.Empty;
- 
                     while (!IsDelimeter(input[i]) && !IsOperator(input[i]))
                     {
                         a += input[i];
@@ -120,7 +117,6 @@ namespace calc
                 }
                 else if (IsOperator(input[i])) 
                 {
-
                     try
                     {
                         double a = temp.Pop();
@@ -129,7 +125,6 @@ namespace calc
                             b = 0;
                         else
                             b = temp.Pop();
- 
                         switch (input[i]) 
                         {
                             case '+':
